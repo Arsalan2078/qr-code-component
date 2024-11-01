@@ -1,52 +1,31 @@
 :root {
-  --color-primary-red: hsl(0, 100%, 50%);
-  --color-primary-green: hsl(120, 100%, 25%);
-  --color-primary-blue: hsl(240, 100%, 50%);
+  --color-primary-slate-900: hsl(218, 44%, 22%);
+  --color-primary-slate-500: hsl(216, 15%, 48%);
+  --color-primary-slate-300: hsl(212, 45%, 89%);
   --color-neutral-white: hsl(0, 0%, 100%);
-  --color-neutral-black: hsl(0, 0%, 0%);
-  --font-weight-100: 100;
-  --font-weight-200: 200;
-  --font-weight-300: 300;
   --font-weight-400: 400;
-  --font-weight-500: 500;
-  --font-weight-600: 600;
   --font-weight-700: 700;
-  --font-weight-800: 800;
-  --font-weight-900: 900;
   --letter-spacing-0: 0px;
-  --letter-spacing-1: 0.0625rem;
-  --letter-spacing-2: 0.125rem;
-  --letter-spacing-4: 0.25rem;
+  --letter-spacing-1: 0.0125rem;
   --line-height-normal: normal;
-  --line-height-100: 100%;
-  --line-height-150: 150%;
-  --line-height-175: 175%;
-  --line-height-200: 200%;
-  --spacer-50: 0.25rem;
-  --spacer-100: 0.5rem;
-  --spacer-150: 0.75rem;
+  --line-height-120: 120%;
+  --line-height-140: 140%;
   --spacer-200: 1rem;
   --spacer-300: 1.5rem;
-  --font-size-400: 0.9rem;
+  --spacer-500: 2.5rem;
+  --font-size-400: 0.9375rem;
+  --font-size-600: 1.375rem;
 }
 @media screen and (min-width: 30rem) {
   :root {
-    --font-size-400: 0.95rem;
+    --font-size-400: 0.9375rem;
+    --font-size-600: 1.375rem;
   }
 }
 @media screen and (min-width: 45rem) {
   :root {
-    --font-size-400: 1rem;
-  }
-}
-@media screen and (min-width: 60rem) {
-  :root {
-    --font-size-400: 1.05rem;
-  }
-}
-@media screen and (min-width: 75rem) {
-  :root {
-    --font-size-400: 1.1rem;
+    --font-size-400: 0.9375rem;
+    --font-size-600: 1.375rem;
   }
 }
 
@@ -139,8 +118,13 @@ meter {
   display: none;
 }
 
+@font-face {
+  font-family: "Outfit";
+  src: url("./assets/fonts/Outfit/Outfit-VariableFont_wght.ttf");
+  font-weight: 400, 700;
+}
 * {
-  font-family: sans-serif;
+  font-family: "Outfit", sans-serif;
   font-size: var(--font-size-400);
   font-weight: var(--font-weight-400);
   letter-spacing: var(--letter-spacing-0);
@@ -148,7 +132,7 @@ meter {
 }
 
 h1 {
-  font-family: sans-serif;
+  font-family: "Outfit", sans-serif;
   font-size: var(--font-size-400);
   font-weight: var(--font-weight-400);
   letter-spacing: var(--letter-spacing-0);
@@ -156,7 +140,7 @@ h1 {
 }
 
 h2 {
-  font-family: sans-serif;
+  font-family: "Outfit", sans-serif;
   font-size: var(--font-size-400);
   font-weight: var(--font-weight-400);
   letter-spacing: var(--letter-spacing-0);
@@ -164,7 +148,7 @@ h2 {
 }
 
 h3 {
-  font-family: sans-serif;
+  font-family: "Outfit", sans-serif;
   font-size: var(--font-size-400);
   font-weight: var(--font-weight-400);
   letter-spacing: var(--letter-spacing-0);
@@ -172,7 +156,7 @@ h3 {
 }
 
 h4 {
-  font-family: sans-serif;
+  font-family: "Outfit", sans-serif;
   font-size: var(--font-size-400);
   font-weight: var(--font-weight-400);
   letter-spacing: var(--letter-spacing-0);
@@ -180,7 +164,7 @@ h4 {
 }
 
 h5 {
-  font-family: sans-serif;
+  font-family: "Outfit", sans-serif;
   font-size: var(--font-size-400);
   font-weight: var(--font-weight-400);
   letter-spacing: var(--letter-spacing-0);
@@ -188,7 +172,7 @@ h5 {
 }
 
 h6 {
-  font-family: sans-serif;
+  font-family: "Outfit", sans-serif;
   font-size: var(--font-size-400);
   font-weight: var(--font-weight-400);
   letter-spacing: var(--letter-spacing-0);
@@ -199,7 +183,7 @@ p,
 li,
 label,
 td {
-  font-family: sans-serif;
+  font-family: "Outfit", sans-serif;
   font-size: var(--font-size-400);
   font-weight: var(--font-weight-400);
   letter-spacing: var(--letter-spacing-0);
@@ -209,11 +193,27 @@ td {
 b,
 strong,
 th {
-  font-family: sans-serif;
+  font-family: "Outfit", sans-serif;
   font-size: var(--font-size-400);
   font-weight: var(--font-weight-700);
   letter-spacing: var(--letter-spacing-0);
   line-height: var(--line-height-normal);
+}
+
+.text-preset-1 {
+  font-family: "Outfit", sans-serif;
+  font-size: var(--font-size-600);
+  font-weight: var(--font-weight-700);
+  letter-spacing: var(--letter-spacing-0);
+  line-height: var(--line-height-120);
+}
+
+.text-preset-2 {
+  font-family: "Outfit", sans-serif;
+  font-size: var(--font-size-400);
+  font-weight: var(--font-weight-400);
+  letter-spacing: var(--letter-spacing-1);
+  line-height: var(--line-height-140);
 }
 
 .container {
@@ -1331,33 +1331,6 @@ th {
   }
 }
 @media screen and (min-width: 0) {
-  .gap-xs-50 {
-    gap: 0.25rem;
-  }
-  .m-xs-50 {
-    margin: 0.25rem;
-  }
-  .p-xs-50 {
-    padding: 0.25rem;
-  }
-  .gap-xs-100 {
-    gap: 0.5rem;
-  }
-  .m-xs-100 {
-    margin: 0.5rem;
-  }
-  .p-xs-100 {
-    padding: 0.5rem;
-  }
-  .gap-xs-150 {
-    gap: 0.75rem;
-  }
-  .m-xs-150 {
-    margin: 0.75rem;
-  }
-  .p-xs-150 {
-    padding: 0.75rem;
-  }
   .gap-xs-200 {
     gap: 1rem;
   }
@@ -1376,103 +1349,16 @@ th {
   .p-xs-300 {
     padding: 1.5rem;
   }
+  .gap-xs-500 {
+    gap: 2.5rem;
+  }
+  .m-xs-500 {
+    margin: 2.5rem;
+  }
+  .p-xs-500 {
+    padding: 2.5rem;
+  }
 }
-.mt-xs-50 {
-  margin-top: 0.25rem;
-}
-
-.mr-xs-50 {
-  margin-right: 0.25rem;
-}
-
-.mb-xs-50 {
-  margin-bottom: 0.25rem;
-}
-
-.ml-xs-50 {
-  margin-left: 0.25rem;
-}
-
-.pt-xs-50 {
-  padding-top: 0.25rem;
-}
-
-.pr-xs-50 {
-  padding-right: 0.25rem;
-}
-
-.pb-xs-50 {
-  padding-bottom: 0.25rem;
-}
-
-.pl-xs-50 {
-  padding-left: 0.25rem;
-}
-
-.mt-xs-100 {
-  margin-top: 0.5rem;
-}
-
-.mr-xs-100 {
-  margin-right: 0.5rem;
-}
-
-.mb-xs-100 {
-  margin-bottom: 0.5rem;
-}
-
-.ml-xs-100 {
-  margin-left: 0.5rem;
-}
-
-.pt-xs-100 {
-  padding-top: 0.5rem;
-}
-
-.pr-xs-100 {
-  padding-right: 0.5rem;
-}
-
-.pb-xs-100 {
-  padding-bottom: 0.5rem;
-}
-
-.pl-xs-100 {
-  padding-left: 0.5rem;
-}
-
-.mt-xs-150 {
-  margin-top: 0.75rem;
-}
-
-.mr-xs-150 {
-  margin-right: 0.75rem;
-}
-
-.mb-xs-150 {
-  margin-bottom: 0.75rem;
-}
-
-.ml-xs-150 {
-  margin-left: 0.75rem;
-}
-
-.pt-xs-150 {
-  padding-top: 0.75rem;
-}
-
-.pr-xs-150 {
-  padding-right: 0.75rem;
-}
-
-.pb-xs-150 {
-  padding-bottom: 0.75rem;
-}
-
-.pl-xs-150 {
-  padding-left: 0.75rem;
-}
-
 .mt-xs-200 {
   margin-top: 1rem;
 }
@@ -1537,76 +1423,108 @@ th {
   padding-left: 1.5rem;
 }
 
-.bg-primary-xs-red {
-  background-color: hsl(0, 100%, 50%);
+.mt-xs-500 {
+  margin-top: 2.5rem;
 }
 
-.text-primary-xs-red {
-  color: hsl(0, 100%, 50%);
+.mr-xs-500 {
+  margin-right: 2.5rem;
 }
 
-.bg-hover-primary-xs-red:hover {
-  background-color: hsl(0, 100%, 50%);
+.mb-xs-500 {
+  margin-bottom: 2.5rem;
 }
 
-.text-hover-primary-xs-red:hover {
-  color: hsl(0, 100%, 50%);
+.ml-xs-500 {
+  margin-left: 2.5rem;
 }
 
-.bg-active-primary-xs-red:active {
-  background-color: hsl(0, 100%, 50%);
+.pt-xs-500 {
+  padding-top: 2.5rem;
 }
 
-.text-active-primary-xs-red:active {
-  color: hsl(0, 100%, 50%);
+.pr-xs-500 {
+  padding-right: 2.5rem;
 }
 
-.bg-primary-xs-green {
-  background-color: hsl(120, 100%, 25%);
+.pb-xs-500 {
+  padding-bottom: 2.5rem;
 }
 
-.text-primary-xs-green {
-  color: hsl(120, 100%, 25%);
+.pl-xs-500 {
+  padding-left: 2.5rem;
 }
 
-.bg-hover-primary-xs-green:hover {
-  background-color: hsl(120, 100%, 25%);
+.bg-primary-xs-slate-900 {
+  background-color: hsl(218, 44%, 22%);
 }
 
-.text-hover-primary-xs-green:hover {
-  color: hsl(120, 100%, 25%);
+.text-primary-xs-slate-900 {
+  color: hsl(218, 44%, 22%);
 }
 
-.bg-active-primary-xs-green:active {
-  background-color: hsl(120, 100%, 25%);
+.bg-hover-primary-xs-slate-900:hover {
+  background-color: hsl(218, 44%, 22%);
 }
 
-.text-active-primary-xs-green:active {
-  color: hsl(120, 100%, 25%);
+.text-hover-primary-xs-slate-900:hover {
+  color: hsl(218, 44%, 22%);
 }
 
-.bg-primary-xs-blue {
-  background-color: hsl(240, 100%, 50%);
+.bg-active-primary-xs-slate-900:active {
+  background-color: hsl(218, 44%, 22%);
 }
 
-.text-primary-xs-blue {
-  color: hsl(240, 100%, 50%);
+.text-active-primary-xs-slate-900:active {
+  color: hsl(218, 44%, 22%);
 }
 
-.bg-hover-primary-xs-blue:hover {
-  background-color: hsl(240, 100%, 50%);
+.bg-primary-xs-slate-500 {
+  background-color: hsl(216, 15%, 48%);
 }
 
-.text-hover-primary-xs-blue:hover {
-  color: hsl(240, 100%, 50%);
+.text-primary-xs-slate-500 {
+  color: hsl(216, 15%, 48%);
 }
 
-.bg-active-primary-xs-blue:active {
-  background-color: hsl(240, 100%, 50%);
+.bg-hover-primary-xs-slate-500:hover {
+  background-color: hsl(216, 15%, 48%);
 }
 
-.text-active-primary-xs-blue:active {
-  color: hsl(240, 100%, 50%);
+.text-hover-primary-xs-slate-500:hover {
+  color: hsl(216, 15%, 48%);
+}
+
+.bg-active-primary-xs-slate-500:active {
+  background-color: hsl(216, 15%, 48%);
+}
+
+.text-active-primary-xs-slate-500:active {
+  color: hsl(216, 15%, 48%);
+}
+
+.bg-primary-xs-slate-300 {
+  background-color: hsl(212, 45%, 89%);
+}
+
+.text-primary-xs-slate-300 {
+  color: hsl(212, 45%, 89%);
+}
+
+.bg-hover-primary-xs-slate-300:hover {
+  background-color: hsl(212, 45%, 89%);
+}
+
+.text-hover-primary-xs-slate-300:hover {
+  color: hsl(212, 45%, 89%);
+}
+
+.bg-active-primary-xs-slate-300:active {
+  background-color: hsl(212, 45%, 89%);
+}
+
+.text-active-primary-xs-slate-300:active {
+  color: hsl(212, 45%, 89%);
 }
 
 .bg-neutral-xs-white {
@@ -1633,58 +1551,7 @@ th {
   color: hsl(0, 0%, 100%);
 }
 
-.bg-neutral-xs-black {
-  background-color: hsl(0, 0%, 0%);
-}
-
-.text-neutral-xs-black {
-  color: hsl(0, 0%, 0%);
-}
-
-.bg-hover-neutral-xs-black:hover {
-  background-color: hsl(0, 0%, 0%);
-}
-
-.text-hover-neutral-xs-black:hover {
-  color: hsl(0, 0%, 0%);
-}
-
-.bg-active-neutral-xs-black:active {
-  background-color: hsl(0, 0%, 0%);
-}
-
-.text-active-neutral-xs-black:active {
-  color: hsl(0, 0%, 0%);
-}
-
 @media screen and (min-width: 30rem) {
-  .gap-sm-50 {
-    gap: 0.25rem;
-  }
-  .m-sm-50 {
-    margin: 0.25rem;
-  }
-  .p-sm-50 {
-    padding: 0.25rem;
-  }
-  .gap-sm-100 {
-    gap: 0.5rem;
-  }
-  .m-sm-100 {
-    margin: 0.5rem;
-  }
-  .p-sm-100 {
-    padding: 0.5rem;
-  }
-  .gap-sm-150 {
-    gap: 0.75rem;
-  }
-  .m-sm-150 {
-    margin: 0.75rem;
-  }
-  .p-sm-150 {
-    padding: 0.75rem;
-  }
   .gap-sm-200 {
     gap: 1rem;
   }
@@ -1703,103 +1570,16 @@ th {
   .p-sm-300 {
     padding: 1.5rem;
   }
+  .gap-sm-500 {
+    gap: 2.5rem;
+  }
+  .m-sm-500 {
+    margin: 2.5rem;
+  }
+  .p-sm-500 {
+    padding: 2.5rem;
+  }
 }
-.mt-sm-50 {
-  margin-top: 0.25rem;
-}
-
-.mr-sm-50 {
-  margin-right: 0.25rem;
-}
-
-.mb-sm-50 {
-  margin-bottom: 0.25rem;
-}
-
-.ml-sm-50 {
-  margin-left: 0.25rem;
-}
-
-.pt-sm-50 {
-  padding-top: 0.25rem;
-}
-
-.pr-sm-50 {
-  padding-right: 0.25rem;
-}
-
-.pb-sm-50 {
-  padding-bottom: 0.25rem;
-}
-
-.pl-sm-50 {
-  padding-left: 0.25rem;
-}
-
-.mt-sm-100 {
-  margin-top: 0.5rem;
-}
-
-.mr-sm-100 {
-  margin-right: 0.5rem;
-}
-
-.mb-sm-100 {
-  margin-bottom: 0.5rem;
-}
-
-.ml-sm-100 {
-  margin-left: 0.5rem;
-}
-
-.pt-sm-100 {
-  padding-top: 0.5rem;
-}
-
-.pr-sm-100 {
-  padding-right: 0.5rem;
-}
-
-.pb-sm-100 {
-  padding-bottom: 0.5rem;
-}
-
-.pl-sm-100 {
-  padding-left: 0.5rem;
-}
-
-.mt-sm-150 {
-  margin-top: 0.75rem;
-}
-
-.mr-sm-150 {
-  margin-right: 0.75rem;
-}
-
-.mb-sm-150 {
-  margin-bottom: 0.75rem;
-}
-
-.ml-sm-150 {
-  margin-left: 0.75rem;
-}
-
-.pt-sm-150 {
-  padding-top: 0.75rem;
-}
-
-.pr-sm-150 {
-  padding-right: 0.75rem;
-}
-
-.pb-sm-150 {
-  padding-bottom: 0.75rem;
-}
-
-.pl-sm-150 {
-  padding-left: 0.75rem;
-}
-
 .mt-sm-200 {
   margin-top: 1rem;
 }
@@ -1864,76 +1644,108 @@ th {
   padding-left: 1.5rem;
 }
 
-.bg-primary-sm-red {
-  background-color: hsl(0, 100%, 50%);
+.mt-sm-500 {
+  margin-top: 2.5rem;
 }
 
-.text-primary-sm-red {
-  color: hsl(0, 100%, 50%);
+.mr-sm-500 {
+  margin-right: 2.5rem;
 }
 
-.bg-hover-primary-sm-red:hover {
-  background-color: hsl(0, 100%, 50%);
+.mb-sm-500 {
+  margin-bottom: 2.5rem;
 }
 
-.text-hover-primary-sm-red:hover {
-  color: hsl(0, 100%, 50%);
+.ml-sm-500 {
+  margin-left: 2.5rem;
 }
 
-.bg-active-primary-sm-red:active {
-  background-color: hsl(0, 100%, 50%);
+.pt-sm-500 {
+  padding-top: 2.5rem;
 }
 
-.text-active-primary-sm-red:active {
-  color: hsl(0, 100%, 50%);
+.pr-sm-500 {
+  padding-right: 2.5rem;
 }
 
-.bg-primary-sm-green {
-  background-color: hsl(120, 100%, 25%);
+.pb-sm-500 {
+  padding-bottom: 2.5rem;
 }
 
-.text-primary-sm-green {
-  color: hsl(120, 100%, 25%);
+.pl-sm-500 {
+  padding-left: 2.5rem;
 }
 
-.bg-hover-primary-sm-green:hover {
-  background-color: hsl(120, 100%, 25%);
+.bg-primary-sm-slate-900 {
+  background-color: hsl(218, 44%, 22%);
 }
 
-.text-hover-primary-sm-green:hover {
-  color: hsl(120, 100%, 25%);
+.text-primary-sm-slate-900 {
+  color: hsl(218, 44%, 22%);
 }
 
-.bg-active-primary-sm-green:active {
-  background-color: hsl(120, 100%, 25%);
+.bg-hover-primary-sm-slate-900:hover {
+  background-color: hsl(218, 44%, 22%);
 }
 
-.text-active-primary-sm-green:active {
-  color: hsl(120, 100%, 25%);
+.text-hover-primary-sm-slate-900:hover {
+  color: hsl(218, 44%, 22%);
 }
 
-.bg-primary-sm-blue {
-  background-color: hsl(240, 100%, 50%);
+.bg-active-primary-sm-slate-900:active {
+  background-color: hsl(218, 44%, 22%);
 }
 
-.text-primary-sm-blue {
-  color: hsl(240, 100%, 50%);
+.text-active-primary-sm-slate-900:active {
+  color: hsl(218, 44%, 22%);
 }
 
-.bg-hover-primary-sm-blue:hover {
-  background-color: hsl(240, 100%, 50%);
+.bg-primary-sm-slate-500 {
+  background-color: hsl(216, 15%, 48%);
 }
 
-.text-hover-primary-sm-blue:hover {
-  color: hsl(240, 100%, 50%);
+.text-primary-sm-slate-500 {
+  color: hsl(216, 15%, 48%);
 }
 
-.bg-active-primary-sm-blue:active {
-  background-color: hsl(240, 100%, 50%);
+.bg-hover-primary-sm-slate-500:hover {
+  background-color: hsl(216, 15%, 48%);
 }
 
-.text-active-primary-sm-blue:active {
-  color: hsl(240, 100%, 50%);
+.text-hover-primary-sm-slate-500:hover {
+  color: hsl(216, 15%, 48%);
+}
+
+.bg-active-primary-sm-slate-500:active {
+  background-color: hsl(216, 15%, 48%);
+}
+
+.text-active-primary-sm-slate-500:active {
+  color: hsl(216, 15%, 48%);
+}
+
+.bg-primary-sm-slate-300 {
+  background-color: hsl(212, 45%, 89%);
+}
+
+.text-primary-sm-slate-300 {
+  color: hsl(212, 45%, 89%);
+}
+
+.bg-hover-primary-sm-slate-300:hover {
+  background-color: hsl(212, 45%, 89%);
+}
+
+.text-hover-primary-sm-slate-300:hover {
+  color: hsl(212, 45%, 89%);
+}
+
+.bg-active-primary-sm-slate-300:active {
+  background-color: hsl(212, 45%, 89%);
+}
+
+.text-active-primary-sm-slate-300:active {
+  color: hsl(212, 45%, 89%);
 }
 
 .bg-neutral-sm-white {
@@ -1960,58 +1772,7 @@ th {
   color: hsl(0, 0%, 100%);
 }
 
-.bg-neutral-sm-black {
-  background-color: hsl(0, 0%, 0%);
-}
-
-.text-neutral-sm-black {
-  color: hsl(0, 0%, 0%);
-}
-
-.bg-hover-neutral-sm-black:hover {
-  background-color: hsl(0, 0%, 0%);
-}
-
-.text-hover-neutral-sm-black:hover {
-  color: hsl(0, 0%, 0%);
-}
-
-.bg-active-neutral-sm-black:active {
-  background-color: hsl(0, 0%, 0%);
-}
-
-.text-active-neutral-sm-black:active {
-  color: hsl(0, 0%, 0%);
-}
-
 @media screen and (min-width: 45rem) {
-  .gap-md-50 {
-    gap: 0.25rem;
-  }
-  .m-md-50 {
-    margin: 0.25rem;
-  }
-  .p-md-50 {
-    padding: 0.25rem;
-  }
-  .gap-md-100 {
-    gap: 0.5rem;
-  }
-  .m-md-100 {
-    margin: 0.5rem;
-  }
-  .p-md-100 {
-    padding: 0.5rem;
-  }
-  .gap-md-150 {
-    gap: 0.75rem;
-  }
-  .m-md-150 {
-    margin: 0.75rem;
-  }
-  .p-md-150 {
-    padding: 0.75rem;
-  }
   .gap-md-200 {
     gap: 1rem;
   }
@@ -2030,103 +1791,16 @@ th {
   .p-md-300 {
     padding: 1.5rem;
   }
+  .gap-md-500 {
+    gap: 2.5rem;
+  }
+  .m-md-500 {
+    margin: 2.5rem;
+  }
+  .p-md-500 {
+    padding: 2.5rem;
+  }
 }
-.mt-md-50 {
-  margin-top: 0.25rem;
-}
-
-.mr-md-50 {
-  margin-right: 0.25rem;
-}
-
-.mb-md-50 {
-  margin-bottom: 0.25rem;
-}
-
-.ml-md-50 {
-  margin-left: 0.25rem;
-}
-
-.pt-md-50 {
-  padding-top: 0.25rem;
-}
-
-.pr-md-50 {
-  padding-right: 0.25rem;
-}
-
-.pb-md-50 {
-  padding-bottom: 0.25rem;
-}
-
-.pl-md-50 {
-  padding-left: 0.25rem;
-}
-
-.mt-md-100 {
-  margin-top: 0.5rem;
-}
-
-.mr-md-100 {
-  margin-right: 0.5rem;
-}
-
-.mb-md-100 {
-  margin-bottom: 0.5rem;
-}
-
-.ml-md-100 {
-  margin-left: 0.5rem;
-}
-
-.pt-md-100 {
-  padding-top: 0.5rem;
-}
-
-.pr-md-100 {
-  padding-right: 0.5rem;
-}
-
-.pb-md-100 {
-  padding-bottom: 0.5rem;
-}
-
-.pl-md-100 {
-  padding-left: 0.5rem;
-}
-
-.mt-md-150 {
-  margin-top: 0.75rem;
-}
-
-.mr-md-150 {
-  margin-right: 0.75rem;
-}
-
-.mb-md-150 {
-  margin-bottom: 0.75rem;
-}
-
-.ml-md-150 {
-  margin-left: 0.75rem;
-}
-
-.pt-md-150 {
-  padding-top: 0.75rem;
-}
-
-.pr-md-150 {
-  padding-right: 0.75rem;
-}
-
-.pb-md-150 {
-  padding-bottom: 0.75rem;
-}
-
-.pl-md-150 {
-  padding-left: 0.75rem;
-}
-
 .mt-md-200 {
   margin-top: 1rem;
 }
@@ -2191,76 +1865,108 @@ th {
   padding-left: 1.5rem;
 }
 
-.bg-primary-md-red {
-  background-color: hsl(0, 100%, 50%);
+.mt-md-500 {
+  margin-top: 2.5rem;
 }
 
-.text-primary-md-red {
-  color: hsl(0, 100%, 50%);
+.mr-md-500 {
+  margin-right: 2.5rem;
 }
 
-.bg-hover-primary-md-red:hover {
-  background-color: hsl(0, 100%, 50%);
+.mb-md-500 {
+  margin-bottom: 2.5rem;
 }
 
-.text-hover-primary-md-red:hover {
-  color: hsl(0, 100%, 50%);
+.ml-md-500 {
+  margin-left: 2.5rem;
 }
 
-.bg-active-primary-md-red:active {
-  background-color: hsl(0, 100%, 50%);
+.pt-md-500 {
+  padding-top: 2.5rem;
 }
 
-.text-active-primary-md-red:active {
-  color: hsl(0, 100%, 50%);
+.pr-md-500 {
+  padding-right: 2.5rem;
 }
 
-.bg-primary-md-green {
-  background-color: hsl(120, 100%, 25%);
+.pb-md-500 {
+  padding-bottom: 2.5rem;
 }
 
-.text-primary-md-green {
-  color: hsl(120, 100%, 25%);
+.pl-md-500 {
+  padding-left: 2.5rem;
 }
 
-.bg-hover-primary-md-green:hover {
-  background-color: hsl(120, 100%, 25%);
+.bg-primary-md-slate-900 {
+  background-color: hsl(218, 44%, 22%);
 }
 
-.text-hover-primary-md-green:hover {
-  color: hsl(120, 100%, 25%);
+.text-primary-md-slate-900 {
+  color: hsl(218, 44%, 22%);
 }
 
-.bg-active-primary-md-green:active {
-  background-color: hsl(120, 100%, 25%);
+.bg-hover-primary-md-slate-900:hover {
+  background-color: hsl(218, 44%, 22%);
 }
 
-.text-active-primary-md-green:active {
-  color: hsl(120, 100%, 25%);
+.text-hover-primary-md-slate-900:hover {
+  color: hsl(218, 44%, 22%);
 }
 
-.bg-primary-md-blue {
-  background-color: hsl(240, 100%, 50%);
+.bg-active-primary-md-slate-900:active {
+  background-color: hsl(218, 44%, 22%);
 }
 
-.text-primary-md-blue {
-  color: hsl(240, 100%, 50%);
+.text-active-primary-md-slate-900:active {
+  color: hsl(218, 44%, 22%);
 }
 
-.bg-hover-primary-md-blue:hover {
-  background-color: hsl(240, 100%, 50%);
+.bg-primary-md-slate-500 {
+  background-color: hsl(216, 15%, 48%);
 }
 
-.text-hover-primary-md-blue:hover {
-  color: hsl(240, 100%, 50%);
+.text-primary-md-slate-500 {
+  color: hsl(216, 15%, 48%);
 }
 
-.bg-active-primary-md-blue:active {
-  background-color: hsl(240, 100%, 50%);
+.bg-hover-primary-md-slate-500:hover {
+  background-color: hsl(216, 15%, 48%);
 }
 
-.text-active-primary-md-blue:active {
-  color: hsl(240, 100%, 50%);
+.text-hover-primary-md-slate-500:hover {
+  color: hsl(216, 15%, 48%);
+}
+
+.bg-active-primary-md-slate-500:active {
+  background-color: hsl(216, 15%, 48%);
+}
+
+.text-active-primary-md-slate-500:active {
+  color: hsl(216, 15%, 48%);
+}
+
+.bg-primary-md-slate-300 {
+  background-color: hsl(212, 45%, 89%);
+}
+
+.text-primary-md-slate-300 {
+  color: hsl(212, 45%, 89%);
+}
+
+.bg-hover-primary-md-slate-300:hover {
+  background-color: hsl(212, 45%, 89%);
+}
+
+.text-hover-primary-md-slate-300:hover {
+  color: hsl(212, 45%, 89%);
+}
+
+.bg-active-primary-md-slate-300:active {
+  background-color: hsl(212, 45%, 89%);
+}
+
+.text-active-primary-md-slate-300:active {
+  color: hsl(212, 45%, 89%);
 }
 
 .bg-neutral-md-white {
@@ -2287,58 +1993,7 @@ th {
   color: hsl(0, 0%, 100%);
 }
 
-.bg-neutral-md-black {
-  background-color: hsl(0, 0%, 0%);
-}
-
-.text-neutral-md-black {
-  color: hsl(0, 0%, 0%);
-}
-
-.bg-hover-neutral-md-black:hover {
-  background-color: hsl(0, 0%, 0%);
-}
-
-.text-hover-neutral-md-black:hover {
-  color: hsl(0, 0%, 0%);
-}
-
-.bg-active-neutral-md-black:active {
-  background-color: hsl(0, 0%, 0%);
-}
-
-.text-active-neutral-md-black:active {
-  color: hsl(0, 0%, 0%);
-}
-
 @media screen and (min-width: 60rem) {
-  .gap-lg-50 {
-    gap: 0.25rem;
-  }
-  .m-lg-50 {
-    margin: 0.25rem;
-  }
-  .p-lg-50 {
-    padding: 0.25rem;
-  }
-  .gap-lg-100 {
-    gap: 0.5rem;
-  }
-  .m-lg-100 {
-    margin: 0.5rem;
-  }
-  .p-lg-100 {
-    padding: 0.5rem;
-  }
-  .gap-lg-150 {
-    gap: 0.75rem;
-  }
-  .m-lg-150 {
-    margin: 0.75rem;
-  }
-  .p-lg-150 {
-    padding: 0.75rem;
-  }
   .gap-lg-200 {
     gap: 1rem;
   }
@@ -2357,103 +2012,16 @@ th {
   .p-lg-300 {
     padding: 1.5rem;
   }
+  .gap-lg-500 {
+    gap: 2.5rem;
+  }
+  .m-lg-500 {
+    margin: 2.5rem;
+  }
+  .p-lg-500 {
+    padding: 2.5rem;
+  }
 }
-.mt-lg-50 {
-  margin-top: 0.25rem;
-}
-
-.mr-lg-50 {
-  margin-right: 0.25rem;
-}
-
-.mb-lg-50 {
-  margin-bottom: 0.25rem;
-}
-
-.ml-lg-50 {
-  margin-left: 0.25rem;
-}
-
-.pt-lg-50 {
-  padding-top: 0.25rem;
-}
-
-.pr-lg-50 {
-  padding-right: 0.25rem;
-}
-
-.pb-lg-50 {
-  padding-bottom: 0.25rem;
-}
-
-.pl-lg-50 {
-  padding-left: 0.25rem;
-}
-
-.mt-lg-100 {
-  margin-top: 0.5rem;
-}
-
-.mr-lg-100 {
-  margin-right: 0.5rem;
-}
-
-.mb-lg-100 {
-  margin-bottom: 0.5rem;
-}
-
-.ml-lg-100 {
-  margin-left: 0.5rem;
-}
-
-.pt-lg-100 {
-  padding-top: 0.5rem;
-}
-
-.pr-lg-100 {
-  padding-right: 0.5rem;
-}
-
-.pb-lg-100 {
-  padding-bottom: 0.5rem;
-}
-
-.pl-lg-100 {
-  padding-left: 0.5rem;
-}
-
-.mt-lg-150 {
-  margin-top: 0.75rem;
-}
-
-.mr-lg-150 {
-  margin-right: 0.75rem;
-}
-
-.mb-lg-150 {
-  margin-bottom: 0.75rem;
-}
-
-.ml-lg-150 {
-  margin-left: 0.75rem;
-}
-
-.pt-lg-150 {
-  padding-top: 0.75rem;
-}
-
-.pr-lg-150 {
-  padding-right: 0.75rem;
-}
-
-.pb-lg-150 {
-  padding-bottom: 0.75rem;
-}
-
-.pl-lg-150 {
-  padding-left: 0.75rem;
-}
-
 .mt-lg-200 {
   margin-top: 1rem;
 }
@@ -2518,76 +2086,108 @@ th {
   padding-left: 1.5rem;
 }
 
-.bg-primary-lg-red {
-  background-color: hsl(0, 100%, 50%);
+.mt-lg-500 {
+  margin-top: 2.5rem;
 }
 
-.text-primary-lg-red {
-  color: hsl(0, 100%, 50%);
+.mr-lg-500 {
+  margin-right: 2.5rem;
 }
 
-.bg-hover-primary-lg-red:hover {
-  background-color: hsl(0, 100%, 50%);
+.mb-lg-500 {
+  margin-bottom: 2.5rem;
 }
 
-.text-hover-primary-lg-red:hover {
-  color: hsl(0, 100%, 50%);
+.ml-lg-500 {
+  margin-left: 2.5rem;
 }
 
-.bg-active-primary-lg-red:active {
-  background-color: hsl(0, 100%, 50%);
+.pt-lg-500 {
+  padding-top: 2.5rem;
 }
 
-.text-active-primary-lg-red:active {
-  color: hsl(0, 100%, 50%);
+.pr-lg-500 {
+  padding-right: 2.5rem;
 }
 
-.bg-primary-lg-green {
-  background-color: hsl(120, 100%, 25%);
+.pb-lg-500 {
+  padding-bottom: 2.5rem;
 }
 
-.text-primary-lg-green {
-  color: hsl(120, 100%, 25%);
+.pl-lg-500 {
+  padding-left: 2.5rem;
 }
 
-.bg-hover-primary-lg-green:hover {
-  background-color: hsl(120, 100%, 25%);
+.bg-primary-lg-slate-900 {
+  background-color: hsl(218, 44%, 22%);
 }
 
-.text-hover-primary-lg-green:hover {
-  color: hsl(120, 100%, 25%);
+.text-primary-lg-slate-900 {
+  color: hsl(218, 44%, 22%);
 }
 
-.bg-active-primary-lg-green:active {
-  background-color: hsl(120, 100%, 25%);
+.bg-hover-primary-lg-slate-900:hover {
+  background-color: hsl(218, 44%, 22%);
 }
 
-.text-active-primary-lg-green:active {
-  color: hsl(120, 100%, 25%);
+.text-hover-primary-lg-slate-900:hover {
+  color: hsl(218, 44%, 22%);
 }
 
-.bg-primary-lg-blue {
-  background-color: hsl(240, 100%, 50%);
+.bg-active-primary-lg-slate-900:active {
+  background-color: hsl(218, 44%, 22%);
 }
 
-.text-primary-lg-blue {
-  color: hsl(240, 100%, 50%);
+.text-active-primary-lg-slate-900:active {
+  color: hsl(218, 44%, 22%);
 }
 
-.bg-hover-primary-lg-blue:hover {
-  background-color: hsl(240, 100%, 50%);
+.bg-primary-lg-slate-500 {
+  background-color: hsl(216, 15%, 48%);
 }
 
-.text-hover-primary-lg-blue:hover {
-  color: hsl(240, 100%, 50%);
+.text-primary-lg-slate-500 {
+  color: hsl(216, 15%, 48%);
 }
 
-.bg-active-primary-lg-blue:active {
-  background-color: hsl(240, 100%, 50%);
+.bg-hover-primary-lg-slate-500:hover {
+  background-color: hsl(216, 15%, 48%);
 }
 
-.text-active-primary-lg-blue:active {
-  color: hsl(240, 100%, 50%);
+.text-hover-primary-lg-slate-500:hover {
+  color: hsl(216, 15%, 48%);
+}
+
+.bg-active-primary-lg-slate-500:active {
+  background-color: hsl(216, 15%, 48%);
+}
+
+.text-active-primary-lg-slate-500:active {
+  color: hsl(216, 15%, 48%);
+}
+
+.bg-primary-lg-slate-300 {
+  background-color: hsl(212, 45%, 89%);
+}
+
+.text-primary-lg-slate-300 {
+  color: hsl(212, 45%, 89%);
+}
+
+.bg-hover-primary-lg-slate-300:hover {
+  background-color: hsl(212, 45%, 89%);
+}
+
+.text-hover-primary-lg-slate-300:hover {
+  color: hsl(212, 45%, 89%);
+}
+
+.bg-active-primary-lg-slate-300:active {
+  background-color: hsl(212, 45%, 89%);
+}
+
+.text-active-primary-lg-slate-300:active {
+  color: hsl(212, 45%, 89%);
 }
 
 .bg-neutral-lg-white {
@@ -2614,58 +2214,7 @@ th {
   color: hsl(0, 0%, 100%);
 }
 
-.bg-neutral-lg-black {
-  background-color: hsl(0, 0%, 0%);
-}
-
-.text-neutral-lg-black {
-  color: hsl(0, 0%, 0%);
-}
-
-.bg-hover-neutral-lg-black:hover {
-  background-color: hsl(0, 0%, 0%);
-}
-
-.text-hover-neutral-lg-black:hover {
-  color: hsl(0, 0%, 0%);
-}
-
-.bg-active-neutral-lg-black:active {
-  background-color: hsl(0, 0%, 0%);
-}
-
-.text-active-neutral-lg-black:active {
-  color: hsl(0, 0%, 0%);
-}
-
 @media screen and (min-width: 75rem) {
-  .gap-xl-50 {
-    gap: 0.25rem;
-  }
-  .m-xl-50 {
-    margin: 0.25rem;
-  }
-  .p-xl-50 {
-    padding: 0.25rem;
-  }
-  .gap-xl-100 {
-    gap: 0.5rem;
-  }
-  .m-xl-100 {
-    margin: 0.5rem;
-  }
-  .p-xl-100 {
-    padding: 0.5rem;
-  }
-  .gap-xl-150 {
-    gap: 0.75rem;
-  }
-  .m-xl-150 {
-    margin: 0.75rem;
-  }
-  .p-xl-150 {
-    padding: 0.75rem;
-  }
   .gap-xl-200 {
     gap: 1rem;
   }
@@ -2684,103 +2233,16 @@ th {
   .p-xl-300 {
     padding: 1.5rem;
   }
+  .gap-xl-500 {
+    gap: 2.5rem;
+  }
+  .m-xl-500 {
+    margin: 2.5rem;
+  }
+  .p-xl-500 {
+    padding: 2.5rem;
+  }
 }
-.mt-xl-50 {
-  margin-top: 0.25rem;
-}
-
-.mr-xl-50 {
-  margin-right: 0.25rem;
-}
-
-.mb-xl-50 {
-  margin-bottom: 0.25rem;
-}
-
-.ml-xl-50 {
-  margin-left: 0.25rem;
-}
-
-.pt-xl-50 {
-  padding-top: 0.25rem;
-}
-
-.pr-xl-50 {
-  padding-right: 0.25rem;
-}
-
-.pb-xl-50 {
-  padding-bottom: 0.25rem;
-}
-
-.pl-xl-50 {
-  padding-left: 0.25rem;
-}
-
-.mt-xl-100 {
-  margin-top: 0.5rem;
-}
-
-.mr-xl-100 {
-  margin-right: 0.5rem;
-}
-
-.mb-xl-100 {
-  margin-bottom: 0.5rem;
-}
-
-.ml-xl-100 {
-  margin-left: 0.5rem;
-}
-
-.pt-xl-100 {
-  padding-top: 0.5rem;
-}
-
-.pr-xl-100 {
-  padding-right: 0.5rem;
-}
-
-.pb-xl-100 {
-  padding-bottom: 0.5rem;
-}
-
-.pl-xl-100 {
-  padding-left: 0.5rem;
-}
-
-.mt-xl-150 {
-  margin-top: 0.75rem;
-}
-
-.mr-xl-150 {
-  margin-right: 0.75rem;
-}
-
-.mb-xl-150 {
-  margin-bottom: 0.75rem;
-}
-
-.ml-xl-150 {
-  margin-left: 0.75rem;
-}
-
-.pt-xl-150 {
-  padding-top: 0.75rem;
-}
-
-.pr-xl-150 {
-  padding-right: 0.75rem;
-}
-
-.pb-xl-150 {
-  padding-bottom: 0.75rem;
-}
-
-.pl-xl-150 {
-  padding-left: 0.75rem;
-}
-
 .mt-xl-200 {
   margin-top: 1rem;
 }
@@ -2845,76 +2307,108 @@ th {
   padding-left: 1.5rem;
 }
 
-.bg-primary-xl-red {
-  background-color: hsl(0, 100%, 50%);
+.mt-xl-500 {
+  margin-top: 2.5rem;
 }
 
-.text-primary-xl-red {
-  color: hsl(0, 100%, 50%);
+.mr-xl-500 {
+  margin-right: 2.5rem;
 }
 
-.bg-hover-primary-xl-red:hover {
-  background-color: hsl(0, 100%, 50%);
+.mb-xl-500 {
+  margin-bottom: 2.5rem;
 }
 
-.text-hover-primary-xl-red:hover {
-  color: hsl(0, 100%, 50%);
+.ml-xl-500 {
+  margin-left: 2.5rem;
 }
 
-.bg-active-primary-xl-red:active {
-  background-color: hsl(0, 100%, 50%);
+.pt-xl-500 {
+  padding-top: 2.5rem;
 }
 
-.text-active-primary-xl-red:active {
-  color: hsl(0, 100%, 50%);
+.pr-xl-500 {
+  padding-right: 2.5rem;
 }
 
-.bg-primary-xl-green {
-  background-color: hsl(120, 100%, 25%);
+.pb-xl-500 {
+  padding-bottom: 2.5rem;
 }
 
-.text-primary-xl-green {
-  color: hsl(120, 100%, 25%);
+.pl-xl-500 {
+  padding-left: 2.5rem;
 }
 
-.bg-hover-primary-xl-green:hover {
-  background-color: hsl(120, 100%, 25%);
+.bg-primary-xl-slate-900 {
+  background-color: hsl(218, 44%, 22%);
 }
 
-.text-hover-primary-xl-green:hover {
-  color: hsl(120, 100%, 25%);
+.text-primary-xl-slate-900 {
+  color: hsl(218, 44%, 22%);
 }
 
-.bg-active-primary-xl-green:active {
-  background-color: hsl(120, 100%, 25%);
+.bg-hover-primary-xl-slate-900:hover {
+  background-color: hsl(218, 44%, 22%);
 }
 
-.text-active-primary-xl-green:active {
-  color: hsl(120, 100%, 25%);
+.text-hover-primary-xl-slate-900:hover {
+  color: hsl(218, 44%, 22%);
 }
 
-.bg-primary-xl-blue {
-  background-color: hsl(240, 100%, 50%);
+.bg-active-primary-xl-slate-900:active {
+  background-color: hsl(218, 44%, 22%);
 }
 
-.text-primary-xl-blue {
-  color: hsl(240, 100%, 50%);
+.text-active-primary-xl-slate-900:active {
+  color: hsl(218, 44%, 22%);
 }
 
-.bg-hover-primary-xl-blue:hover {
-  background-color: hsl(240, 100%, 50%);
+.bg-primary-xl-slate-500 {
+  background-color: hsl(216, 15%, 48%);
 }
 
-.text-hover-primary-xl-blue:hover {
-  color: hsl(240, 100%, 50%);
+.text-primary-xl-slate-500 {
+  color: hsl(216, 15%, 48%);
 }
 
-.bg-active-primary-xl-blue:active {
-  background-color: hsl(240, 100%, 50%);
+.bg-hover-primary-xl-slate-500:hover {
+  background-color: hsl(216, 15%, 48%);
 }
 
-.text-active-primary-xl-blue:active {
-  color: hsl(240, 100%, 50%);
+.text-hover-primary-xl-slate-500:hover {
+  color: hsl(216, 15%, 48%);
+}
+
+.bg-active-primary-xl-slate-500:active {
+  background-color: hsl(216, 15%, 48%);
+}
+
+.text-active-primary-xl-slate-500:active {
+  color: hsl(216, 15%, 48%);
+}
+
+.bg-primary-xl-slate-300 {
+  background-color: hsl(212, 45%, 89%);
+}
+
+.text-primary-xl-slate-300 {
+  color: hsl(212, 45%, 89%);
+}
+
+.bg-hover-primary-xl-slate-300:hover {
+  background-color: hsl(212, 45%, 89%);
+}
+
+.text-hover-primary-xl-slate-300:hover {
+  color: hsl(212, 45%, 89%);
+}
+
+.bg-active-primary-xl-slate-300:active {
+  background-color: hsl(212, 45%, 89%);
+}
+
+.text-active-primary-xl-slate-300:active {
+  color: hsl(212, 45%, 89%);
 }
 
 .bg-neutral-xl-white {
@@ -2939,30 +2433,6 @@ th {
 
 .text-active-neutral-xl-white:active {
   color: hsl(0, 0%, 100%);
-}
-
-.bg-neutral-xl-black {
-  background-color: hsl(0, 0%, 0%);
-}
-
-.text-neutral-xl-black {
-  color: hsl(0, 0%, 0%);
-}
-
-.bg-hover-neutral-xl-black:hover {
-  background-color: hsl(0, 0%, 0%);
-}
-
-.text-hover-neutral-xl-black:hover {
-  color: hsl(0, 0%, 0%);
-}
-
-.bg-active-neutral-xl-black:active {
-  background-color: hsl(0, 0%, 0%);
-}
-
-.text-active-neutral-xl-black:active {
-  color: hsl(0, 0%, 0%);
 }
 
 /*# sourceMappingURL=style.css.map */

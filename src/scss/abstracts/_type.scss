@@ -1,7 +1,4 @@
-$font-stack: sans-serif !default;
-$font-size-default: 1rem !default;
-$letter-spacing-default: 0.125rem !default;
-$letter-spacing-default: 0.125rem !default;
+$font-stack: "Outfit", sans-serif !default;
 
 // FONT SIZES
 $font-sizes: (
@@ -11,33 +8,24 @@ $font-sizes: (
     (
       "breakpoint": "xs",
       "values": (
-        "400": $font-size-default * 0.90
+        "400": 0.9375rem,
+        "600": 1.375rem
       )
     ),
     (
       "breakpoint": "sm",
       "values": (
-        "400": $font-size-default * 0.95
+        "400": 0.9375rem,
+        "600": 1.375rem,
       )
     ),
     (
       "breakpoint": "md",
       "values": (
-        "400": $font-size-default * 1.00
+        "400": 0.9375rem,
+        "600": 1.375rem,
       )
-    ),
-    (
-      "breakpoint": "lg",
-      "values": (
-        "400": $font-size-default * 1.05
-      )
-    ),
-    (
-      "breakpoint": "xl",
-      "values": (
-        "400": $font-size-default * 1.10
-      )
-    ),
+    )
   ),
 ) !default;
 
@@ -48,15 +36,8 @@ $type-properties: (
     "property": "font-weight",
     "prefix": "font-weight",
     "values": (
-      "100": 100,
-      "200": 200,
-      "300": 300,
       "400": 400,
-      "500": 500,
-      "600": 600,
-      "700": 700,
-      "800": 800,
-      "900": 900      
+      "700": 700,  
     )
   ),
   (
@@ -64,9 +45,7 @@ $type-properties: (
     "prefix": "letter-spacing",
     "values": (
       "0": 0px,
-      "1": $letter-spacing-default * 0.5,
-      "2": $letter-spacing-default * 1.0,
-      "4": $letter-spacing-default * 2.0      
+      "1": 0.0125rem,  
     )
   ),
   (
@@ -74,10 +53,8 @@ $type-properties: (
     "prefix": "line-height",
     "values": (
       "normal": normal,
-      "100": 100%,
-      "150": 150%,
-      "175": 175%,
-      "200": 200%
+      "120": 120%,
+      "140": 140%
     )
   )
 ) !default;

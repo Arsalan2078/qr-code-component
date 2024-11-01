@@ -42,3 +42,21 @@ th {
     $font-weight: var(--font-weight-700)
   );
 }
+
+.text-preset-1 {
+  @include mixins.font-styles(
+    $font-size: var(--font-size-600),
+    $font-weight: var(--font-weight-700),
+    $letter-spacing: var(--letter-spacing-0),
+    $line-height: var(--line-height-120)
+  )
+}
+
+.text-preset-2 {
+  @include mixins.font-styles(
+    $font-size: var(--font-size-400),
+    $font-weight: var(--font-weight-400),
+    $letter-spacing: var(--letter-spacing-1),
+    $line-height: var(--line-height-140)
+  )
+}

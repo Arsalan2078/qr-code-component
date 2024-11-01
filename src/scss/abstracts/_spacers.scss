@@ -2,9 +2,7 @@
 $spacer-default: 1rem !default;
 
 $spacers: (
-  50:  $spacer-default * 0.25,
-  100: $spacer-default * 0.50,
-  150: $spacer-default * 0.75,
   200: $spacer-default * 1.00,
-  300: $spacer-default * 1.50    
+  300: $spacer-default * 1.50,
+  500: $spacer-default * 2.50    
 ) !default;
