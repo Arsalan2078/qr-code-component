@@ -2,6 +2,7 @@
 @use '../abstracts/colors';
 @use '../abstracts/type';
 @use '../abstracts/spacers';
+@use '../abstracts/border-radii';
 
 :root {
   // ROOT: COLORS
@@ -27,6 +28,11 @@
   // ROOT: SPACERS
   @each $key, $value in spacers.$spacers {
     --spacer-#{$key}: #{$value};
+  }
+
+  // ROOT: BORDER RADII
+  @each $key, $value in border-radii.$border-radii {
+    --border-radius-#{$key}: #{$value};
   }
 
   // ROOT: XS FONT SIZES

@@ -1,7 +1,15 @@
 @use '../abstracts/breakpoints';
 @use '../abstracts/colors';
 @use '../abstracts/spacers';
+@use '../abstracts/border-radii';
 @use '../abstracts/mixins';
+
+// BORDER RADII
+@each $key, $value in border-radii.$border-radii {
+  .border-radius-#{$key} {
+    border-radius: #{$value};
+  }
+}
 
 @each $breakpoint-key, $breakpoint-value in breakpoints.$breakpoints {
   @include mixins.breakpoint($breakpoint-key) {

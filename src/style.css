@@ -13,6 +13,8 @@
   --spacer-200: 1rem;
   --spacer-300: 1.5rem;
   --spacer-500: 2.5rem;
+  --border-radius-100: 0.625rem;
+  --border-radius-200: 1.25rem;
   --font-size-400: 0.9375rem;
   --font-size-600: 1.375rem;
 }
@@ -1330,6 +1332,14 @@ th {
     grid-column: span 12;
   }
 }
+.border-radius-100 {
+  border-radius: 0.625rem;
+}
+
+.border-radius-200 {
+  border-radius: 1.25rem;
+}
+
 @media screen and (min-width: 0) {
   .gap-xs-200 {
     gap: 1rem;
