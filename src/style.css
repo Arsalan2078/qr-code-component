@@ -2445,4 +2445,28 @@ th {
   color: hsl(0, 0%, 100%);
 }
 
+.text-align-center {
+  text-align: center;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: inherit;
+}
+
+#root {
+  height: inherit;
+  background-color: var(--color-primary-slate-900);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.qr-code-component {
+  flex-basis: 20rem;
+}
+
 /*# sourceMappingURL=style.css.map */
