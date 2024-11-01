@@ -1,0 +1,51 @@
+$flex-container-properties: (
+  (
+    "prefix": "flex-direction",
+    "values": (
+      "row": "row",
+      "column": "column",
+      "row-reverse": "row-reverse",
+      "column-reverse": "column-reverse"
+    )
+  ),
+  (
+    "prefix": "flex-wrap",
+    "values": (
+      "wrap": "wrap",
+      "nowrap": "nowrap",
+      "wrap-reverse": "wrap-reverse"
+    )
+  ),
+  (
+    "prefix": "justify-content",
+    "values": (
+      "flex-start": "flex-start",
+      "center": "center",
+      "flex-end": "flex-end",
+      "space-between": "space-between",
+      "space-around": "space-around",
+      "space-evenly": "space-evenly"
+    )
+  ),
+  (
+    "prefix": "align-items",
+    "values": (
+      "flex-start": "flex-start",
+      "center": "center",
+      "flex-end": "flex-end",
+      "stretch": "stretch",
+      "baseline": "baseline"
+    )
+  ),
+  (
+    "prefix": "align-content",
+    "values": (
+      "flex-start": "flex-start",
+      "center": "center",
+      "flex-end": "flex-end",
+      "space-between": "space-between",
+      "space-around": "space-around",
+      "space-evenly": "space-evenly"
+    )
+  )
+);

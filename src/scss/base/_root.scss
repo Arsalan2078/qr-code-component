@@ -1,0 +1,59 @@
+@use '../abstracts/mixins';
+@use '../abstracts/colors';
+@use '../abstracts/type';
+@use '../abstracts/spacers';
+
+:root {
+  // ROOT: COLORS
+  @each $color-group in colors.$color-groups {
+    $prefix: map-get($color-group, "prefix");
+    $values: map-get($color-group, "values");
+
+    @each $key, $value in $values {
+      --color-#{$prefix}-#{$key}: #{$value};
+    }
+  }
+
+  // ROOT: TYPE PROPERTIES
+  @each $type-property in type.$type-properties {
+    $prefix: map-get($type-property, "prefix");
+    $values: map-get($type-property, "values");
+
+    @each $key, $value in $values {
+      --#{$prefix}-#{$key}: #{$value};
+    }
+  }
+
+  // ROOT: SPACERS
+  @each $key, $value in spacers.$spacers {
+    --spacer-#{$key}: #{$value};
+  }
+
+  // ROOT: XS FONT SIZES
+  @include mixins.root-font-sizes("xs");
+
+
+  // 30rem
+  @include mixins.breakpoint("sm") {
+    // ROOT: SM FONT SIZES
+    @include mixins.root-font-sizes("sm");
+  }
+
+  // 45rem
+  @include mixins.breakpoint("md") {
+    // ROOT: MD FONT SIZES
+    @include mixins.root-font-sizes("md");
+  }
+
+  // 60rem
+  @include mixins.breakpoint("lg") {
+    // ROOT: LG FONT SIZES
+    @include mixins.root-font-sizes("lg");
+  }
+
+  // 75rem
+  @include mixins.breakpoint("xl") {
+    // ROOT: XL FONT SIZES
+    @include mixins.root-font-sizes("xl");
+  }
+}

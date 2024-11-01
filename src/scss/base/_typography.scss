@@ -1,0 +1,44 @@
+@use '../abstracts/mixins';
+
+* {
+  @include mixins.font-styles();
+}
+
+h1 {
+  @include mixins.font-styles();
+}
+
+h2 {
+  @include mixins.font-styles();
+}
+
+h3 {
+  @include mixins.font-styles();
+}
+
+h4 {
+  @include mixins.font-styles();
+}
+
+h5 {
+  @include mixins.font-styles();
+}
+
+h6 {
+  @include mixins.font-styles();
+}
+
+p,
+li,
+label,
+td {
+  @include mixins.font-styles();
+}
+
+b,
+strong,
+th {
+  @include mixins.font-styles(
+    $font-weight: var(--font-weight-700)
+  );
+}

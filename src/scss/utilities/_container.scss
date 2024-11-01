@@ -1,0 +1,7 @@
+@use '../abstracts/breakpoints';
+
+.container {
+  margin: 0 auto;
+  padding: 0 var(--spacer-200);
+  width: min(100% - var(--spacer-200), map-get(breakpoints.$breakpoints, "md"));
+}

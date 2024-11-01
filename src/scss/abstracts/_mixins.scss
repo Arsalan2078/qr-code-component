@@ -1,0 +1,42 @@
+@use './breakpoints';
+@use './colors';
+@use './type';
+@use './spacers';
+
+// MIXIN: BREAKPOINT
+@mixin breakpoint($breakpoint) {
+  @if map-has-key(breakpoints.$breakpoints, $breakpoint ) {
+    @media screen and (min-width: map-get(breakpoints.$breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+}
+
+// MIXIN: ROOT FONT SIZE for DIFFERENT SCREENS IZES
+@mixin root-font-sizes($bp) {
+  $prefix: map-get(type.$font-sizes, "prefix");
+  $breakpoints: map-get(type.$font-sizes, "breakpoints");
+
+  @each $breakpoint in $breakpoints {
+    @if map-get($breakpoint, "breakpoint") == $bp {
+      @each $key, $value in map-get($breakpoint, "values") {
+        --#{$prefix}-#{$key}: #{$value};
+      }      
+    }
+  }
+}
+
+// MIXIN: FONT STYLES
+@mixin font-styles(
+  $font-family: type.$font-stack,
+  $font-size: var(--font-size-400),
+  $font-weight: var(--font-weight-400),
+  $letter-spacing: var(--letter-spacing-0),
+  $line-height: var(--line-height-normal)
+) {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  letter-spacing: $letter-spacing;
+  line-height: $line-height;
+}

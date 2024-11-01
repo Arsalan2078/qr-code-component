@@ -1,0 +1,104 @@
+@use '../abstracts/breakpoints';
+@use '../abstracts/colors';
+@use '../abstracts/spacers';
+@use '../abstracts/mixins';
+
+@each $breakpoint-key, $breakpoint-value in breakpoints.$breakpoints {
+  @include mixins.breakpoint($breakpoint-key) {
+    @each $key, $value in spacers.$spacers {
+      // GAP UTILITIES
+      .gap-#{$breakpoint-key}-#{$key} {
+        gap: #{$value};
+      }
+
+      // MARGINS
+      .m-#{$breakpoint-key}-#{$key} {
+        margin: #{$value};
+      }
+  
+      // PADDINGS
+      .p-#{$breakpoint-key}-#{$key} {
+        padding: #{$value};
+      }
+    }    
+  }
+
+  @each $key, $value in spacers.$spacers {
+    // ONE SIDED MARGINS
+    .mt-#{$breakpoint-key}-#{$key} {
+      margin-top: #{$value};
+    }
+
+    .mr-#{$breakpoint-key}-#{$key} {
+      margin-right: #{$value};
+    }
+
+    .mb-#{$breakpoint-key}-#{$key} {
+      margin-bottom: #{$value};
+    }
+
+    .ml-#{$breakpoint-key}-#{$key} {
+      margin-left: #{$value};
+    }
+
+    // ONE SIDED PADDINGS
+    .pt-#{$breakpoint-key}-#{$key} {
+      padding-top: #{$value};
+    }
+
+    .pr-#{$breakpoint-key}-#{$key} {
+      padding-right: #{$value};
+    }
+
+    .pb-#{$breakpoint-key}-#{$key} {
+      padding-bottom: #{$value};
+    }
+
+    .pl-#{$breakpoint-key}-#{$key} {
+      padding-left: #{$value};
+    }
+  }    
+
+  @each $color-group in colors.$color-groups {
+    $prefix: map-get($color-group, "prefix");
+    $values: map-get($color-group, "values");
+  
+    @each $key, $value in $values {
+      // BACKGROUNDS AND TEXTS
+      .bg-#{$prefix}-#{$breakpoint-key}-#{$key} {
+        background-color: #{$value};
+      }
+  
+      .text-#{$prefix}-#{$breakpoint-key}-#{$key} {
+        color: #{$value};
+      }
+  
+      // HOVERS
+      .bg-hover-#{$prefix}-#{$breakpoint-key}-#{$key} {
+        &:hover {
+          background-color: #{$value};          
+        }
+      }
+  
+      .text-hover-#{$prefix}-#{$breakpoint-key}-#{$key} {
+        &:hover {
+          color: #{$value};
+        }
+      }
+  
+      // ACTIVES
+      .bg-active-#{$prefix}-#{$breakpoint-key}-#{$key} {
+        &:active {
+          background-color: #{$value};          
+        }
+        
+      }
+  
+      .text-active-#{$prefix}-#{$breakpoint-key}-#{$key} {
+        &:active {
+          color: #{$value};
+        }
+      }
+    }
+  }
+}

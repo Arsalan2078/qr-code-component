@@ -1,0 +1,23 @@
+@use '../abstracts/breakpoints';
+@use '../abstracts/flex-container';
+@use '../abstracts/mixins';
+
+.flex {
+  display: flex;
+}
+
+@each $key1, $value1 in breakpoints.$breakpoints {
+  @include mixins.breakpoint($key1) {
+    @each $property in flex-container.$flex-container-properties {
+      $prefix: map-get($property, "prefix");
+      $values: map-get($property, "values");
+
+      @each $key2, $value2 in $values {
+        .#{$prefix}-#{$key1}-#{$key2} {
+          #{$prefix}: #{$value2};
+        }
+      }
+    }      
+  }
+}
+

@@ -1,0 +1,18 @@
+// COLORS
+$color-groups: (
+  (
+    "prefix": "primary",
+    "values": (
+      "red": hsl(0, 100%, 50%),
+      "green": hsl(120, 100%, 25%),
+      "blue": hsl(240, 100%, 50%)      
+    )
+  ),
+  (
+    "prefix": "neutral",
+    "values": (
+      "white": hsl(0, 0%, 100%),
+      "black": hsl(0, 0%, 0%)      
+    )
+  )
+);
